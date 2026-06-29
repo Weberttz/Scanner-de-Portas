@@ -18,7 +18,7 @@ def main():
     for porta in portas:
         resultado = scan_porta(host, porta)
 
-        if resultado == 0:
+        if resultado:
             print(f"[ ABERTA ] porta {porta} ")
         else:
             print(f"[ FECHADA ] porta {porta}")

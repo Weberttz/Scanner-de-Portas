@@ -5,10 +5,10 @@ from threading import Thread
 portas_abertas = []
 
 def scan_porta(host, porta):
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # criar socket Ipv4 + TCP
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # cria socket Ipv4 + TCP
     sock.settimeout(1) # tempo de um segundo
-    resultado = sock.connect_ex((host, porta)) # tentar abrir conexão
-    sock.close() # fechar socket
+    resultado = sock.connect_ex((host, porta)) # tenta abrir conexão
+    sock.close() # fecha socket
     if resultado == 0:
         portas_abertas.append(porta) # adiciona se estiver aberta
 
