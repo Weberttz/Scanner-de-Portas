@@ -76,7 +76,7 @@ python3 scanner_v4.py --host localhost --inicio 8080 --fim 8080 --output csv
 |---|---|---|
 | `--host` | Host a escanear | `localhost` |
 | `--inicio` | Porta inicial | `1` |
-| `--fim` | Porta final | `1` |
+| `--fim` | Porta final | `1024` |
 | `--output` | Formato de saída: `print`, `json`, `csv` | `print` |
 
 #### Exemplos de output
