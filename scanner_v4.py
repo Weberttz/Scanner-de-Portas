@@ -32,7 +32,7 @@ def parse_args(): # arg parse para rodar por linha de comando
     parser = argparse.ArgumentParser(description="Passe os argumentos!")
     parser.add_argument("--host", default="localhost", help="Host para escanear")
     parser.add_argument("--inicio", type=int, default=1, help="Porta incial")
-    parser.add_argument("--fim", type=int, default=1)
+    parser.add_argument("--fim", type=int, default=1024)
     parser.add_argument("--output", choices=["json", "csv", "print"], default="print")
     
     return parser.parse_args()
