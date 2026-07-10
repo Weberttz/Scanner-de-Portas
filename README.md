@@ -8,10 +8,10 @@ Scanner de portas de rede desenvolvido em Python, evoluindo de um script simples
 
 | Versão | Descrição |
 |---|---|
-| `v1_scanner.py` | Scan sequencial simples |
-| `v2_scanner.py` | Scan com threads (mais rápido) |
-| `v3_scanner.py` | Banner grabbing nas portas comuns |
-| `v4_scanner.py` | Argparse + output em JSON/CSV |
+| `scanner_v1.py` | Scan sequencial simples |
+| `scanner_v2.py` | Scan com threads (mais rápido) |
+| `scanner_v3.py` | Banner grabbing nas portas comuns |
+| `scanner_v4.py` | Argparse + output em JSON/CSV |
 
 ---
 
@@ -29,7 +29,7 @@ Scanner de portas de rede desenvolvido em Python, evoluindo de um script simples
 Varre as portas 1 a 1024 uma por vez e mede o tempo total.
 
 ```bash
-python v1_scanner.py
+python3 scanner_v1.py
 ```
 
 ---
@@ -39,7 +39,7 @@ python v1_scanner.py
 Dispara múltiplas conexões em paralelo usando `ThreadPoolExecutor`, bem mais rápido que a v1.
 
 ```bash
-python v2_scanner.py
+python3 scanner_v2.py
 ```
 
 ---
@@ -49,7 +49,7 @@ python v2_scanner.py
 Conecta nas portas 21 (FTP), 22 (SSH) e 80 (HTTP) e captura a mensagem de identificação do serviço.
 
 ```bash
-python v3_scanner.py
+python3 scanner_v3.py
 ```
 
 Para testar localmente, abra um servidor em outro terminal:
@@ -65,9 +65,9 @@ python3 -m http.server 8080
 Versão completa com argumentos de linha de comando e opções de output.
 
 ```bash
-python v4_scanner.py --host localhost --inicio 1 --fim 1024 --output print
-python v4_scanner.py --host localhost --inicio 8080 --fim 8080 --output json
-python v4_scanner.py --host localhost --inicio 8080 --fim 8080 --output csv
+python3 scanner_v4.py --host localhost --inicio 1 --fim 1024 --output print
+python3 scanner_v4.py --host localhost --inicio 8080 --fim 8080 --output json
+python3 scanner_v4.py --host localhost --inicio 8080 --fim 8080 --output csv
 ```
 
 #### Argumentos disponíveis
